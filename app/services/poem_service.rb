@@ -1,9 +1,8 @@
 class PoemService
   def self.get_poems(author)
-    results = conn.get("/author/") do |req|
-      req.params[:author] = author
-    end
-    require "pry"; binding.pry
+    author = author[:author]
+    results = conn.get("/author,poemcount/#{author};10")
+    parsed = JSON.parse(results.body, symbolize_names: true)
   end
 
   def self.conn
