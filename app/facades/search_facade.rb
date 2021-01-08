@@ -1,7 +1,7 @@
 class SearchFacade
   def self.get_poems(author)
     poems = PoemService.get_poems(author)
-    poem_obj = create_poem_objects(poems)
+    create_poem_objects(poems)
   end
 
   def self.create_poem_objects(poems)
@@ -11,5 +11,6 @@ class SearchFacade
   end
 
   def self.get_tones()
+    
   end
 end

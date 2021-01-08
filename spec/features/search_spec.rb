@@ -9,6 +9,7 @@ describe 'As a user' do
     end
 
     it 'takes me to the search page and I see a list of the first 10 poems' do
+      save_and_open_page
       expect(current_path).to eq('/search')
       expect(page).to have_css(".poem", count: 10)
     end
