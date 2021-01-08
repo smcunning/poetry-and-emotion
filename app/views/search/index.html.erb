@@ -1,0 +1,9 @@
+<h1>Your Search Results:</h1>
+<% @poems.each do |poem| %>
+  <ul class="poem">
+    <li class="title"><h2><%= poem.title %></h2></li>
+    <li class="author"><h3>Written By: <%= poem.author %></h3></li>
+    <li class="poem-text"><p><%= poem.text %></p></li>
+    <li class="tones"><p>Tones for This Poem Include:<%= poem.tones %></p></li>
+  </ul>
+<% end %>
